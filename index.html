@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Arithmetic Operator</h1>
+<h3 style="color:rgb(185, 22, 25);">Topic is Even OR Odd Number</h3>
+<h3 style="color:rgb(98, 8, 136);">Loop</h3>
+<h3 style="color:rgb(136, 77, 13);">Function</h3>
+<h2 style="color:rgb(101, 43, 177);">Table of 2</h2>
+<h2 style="color:rgb(216, 39, 148);">Object</h2>
+  <ul id="table"></ul>
+<script>
+// let num1 = 5;
+// let num2 = 8;
+// let sum = num1 + num2;
+// document.getElementById("demo").innerHTML = z;
+
+// let i = 10;
+// let j = 20;
+// let k = i - j;
+// console.log(k);
+
+let x = 10;
+let y = 20;
+let a = x + y;
+let b = x-y;
+let c = x*y;
+let d = x/y;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+
+// for (let t=1; t <=10; t++){
+//     let result = 2 * t;
+//     console.log("2*(i){result }");
+// }
+const tableElement = document.getElementById('table');
+    for (let i = 1; i <= 10; i++) {
+      const li = document.createElement('li');
+      li.textContent = `2 x ${i} = ${2 * i}`;
+      tableElement.appendChild(li);
+    }
+  //  
+
+// let fruits = ["Apple", "Banana", "Mango"];
+//   fruits.push("Orange"); 
+//   console.log(fruits);
+//   // document.write("push(): " + fruits);
+
+
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
