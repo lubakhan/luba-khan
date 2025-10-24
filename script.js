@@ -211,12 +211,17 @@ document.write("Today is: " + days[currentDay]);
 
 
 
+const sayHello = function() {
+    // console.log('this', this);
+    return this;
+};
 
+function sayHello2() {
+    return this;
+}
 
-
-
-
-
+console.log('sayHello', sayHello());
+console.log('sayHello2', sayHello2());
 
 
 
