@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winter Wear Store</title>
+
+ 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  <header class="header">                 
+  
+    <div class="search-bar">               
+      <input type="text" placeholder="Search products..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    
+     <div class="logo">                        
+        <p><span class="logoM">M</span>Clothes</p>
+ 
+</div>
+   
+    <div class="icons">
+      <a href="signup.html"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-heart"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      
+    </div>
+  </header>
+
+  
+  <nav class="menu-bar">                
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class = "product">
+    <h2>Our Product></h2>
+    <div class ="product-grid">
+      <div class="product-card">
+        <img src="assets/">
+        
+    
+  </section>
+<footer>
+    <p>© 2025 WinterWear | All Rights Reserved</p>
+  </footer>
+
+
+  <script src="auth.js">
+    function logout() {
+  localStorage.removeItem('LoggedInUser');
+  alert('You have been logged out.');
+  window.location.href = 'signin.html';
+}
+
+// for (let c=5; c>=0; c+=5){
+//     console.log(c);
+// }
+for (let i=2; i<=20; i+=5){
+  console.log(i);
+}
+number = 2;
+
+for(two = 1; two <=10; two++) {
+    console.log(number + "*" + two + "=" +  (number * two));
+}
+
+  </script>
+</body>
+</html>

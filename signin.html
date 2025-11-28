@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Sign In</h2>
+
+      
+
+      <!-- Authentication Connection -->
+   <form onsubmit="event.preventDefault(); signIn();">
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+
+      <div class="footer-link">
+        <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="auth.js"></script>
+</body>
+</html>
+

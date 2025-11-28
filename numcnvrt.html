@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number convert</title>
+</head>
+<body>
+    <h1 style="font-style:italic;color: darkcyan;">Number Convert To Word</h1>
+    <script>
+
+
+
+
+    // let words = "";
+ function numtowords(num) {
+  let ones= ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+  let tens=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+  let hundreds=["hundred","thousand","million","billion","trillion"];
+  let lakh =["lac"];
+
+  if(num < 20){
+    return ones[num];
+  }
+
+  if(num < 100){
+
+  
+    let call = 0;
+
+    if (num >= 20 && num < 30) call = 0;
+    if (num >= 30 && num < 40) call = 1;
+    if (num >= 40 && num < 50) call = 2;
+    if (num >= 50 && num < 60) call = 3;
+    if (num >= 60 && num < 70) call = 4;
+    if (num >= 70 && num < 80) call = 5;
+    if (num >= 80 && num < 90) call = 6;
+    if (num >= 90 && num < 100) call = 7;
+
+    let onesdigit = num;
+    onesdigit = num % 10;
+
+    if (onesdigit === 0){
+      return tens[call];
+    }
+    else{
+      return tens[call] + " " + ones[String(num)[1]];
+    }
+}
+
+///////////////////100-1000///////////////// 
+
+if (num < 1000){
+  let call1 = 0;
+
+  if (num >= 100 && num < 1000) call1 = 0;
+
+ let hundreddigits = num;
+ hundreddigits = num % 100;
+  if(hundreddigits === 0){
+    return hundreds[call1];
+  }
+  else{
+    return ones[String(num)[0]] + " " + hundreds[call1] + " " +  tens[String(num)[1] - 2] + " " +  ones[String(num)[2]];
+  }
+}
+
+///////////////////////////1000-1000000/////////////////
+
+if (num < 1000000){
+  let call2 = 1;
+
+  if (num >= 1000 && num < 1000000) call2 = 1;
+
+ let thousanddigits = num;
+ thousanddigits = num % 1000;
+  if(thousanddigits === 0){
+    return hundreds[call2];
+  }
+  else{
+    return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call2]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]];
+  }
+}
+
+
+///////////////////////1000000-1000000000////////////////////////////////////
+
+if (1000000 < 1000000000){
+  let call3 = 2;
+   if (num >= 1000000 && num < 1000000000) call3 = 2;
+   
+   let milliondigit = num;
+   milliondigit = num % 1000000;
+   if(milliondigit === 0){
+    return milliondigit[call3];
+   }
+   else{
+    return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call3]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[1] + " " + ones[String(num)[6]] + " " + hundreds[0]  +" " +  tens[String(num)[7]-2] + " "+  ones[String(num)[8]];
+   }
+}
+//////////////////////////////1000000000-1000000000000//////////////////////////
+
+// if (1000000000 < 1000000000000){
+//   let call4 = 3;
+//   if (num >= 1000000000 && num < 1000000000000) call4 = 3;
+//   let billiondigit = num;
+//   billiondigit = num % 1000000000;
+//   if (billiondigit === 0){
+//     return billiondigit[call4];
+//   }
+//   else{
+//     return ones[String(num)[0]] + " " + hundreds[String(num)[5]]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call4]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[1] + " " + ones[String(num)[6]] + " " + hundreds[0]  +" " +  tens[String(num)[7]-2] + " "+  ones[String(num)[8]] + " " +  hundreds[1] + " " + ones[String(num)[8]] + " " + hundreds[0] + " " +  tens[String(num)[7]-2] + " " + ones[String(num)[8]] ;
+//   }
+
+// }
+ }
+console.log(numtowords(685743321));
+
+
+    
+
+
+ 
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+

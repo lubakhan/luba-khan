@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>Winter Wear</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <section class="about">
+    <h1>About Our Store</h1>
+    <p>Welcome to Winter Wear — your one-stop shop for cozy and stylish winter clothing. We offer premium jackets, scarves, and boots to keep you warm this season!</p>
+  </section>
+
+  <script>
+    document.getElementById("cart-count").textContent =
+      JSON.parse(localStorage.getItem("cartItems") || "[]").length;
+  </script>
+
+</body>
+</html>

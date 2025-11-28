@@ -3,65 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>JavaScript Arithmetic Operator</h1>
-<h3 style="color:rgb(185, 22, 25);">Topic is Even OR Odd Number</h3>
-<h3 style="color:rgb(98, 8, 136);">Loop</h3>
-<h3 style="color:rgb(136, 77, 13);">Function</h3>
-<h2 style="color:rgb(101, 43, 177);">Table of 2</h2>
-<h2 style="color:rgb(216, 39, 148);">Object</h2>
-  <ul id="table"></ul>
-<script>
-// let num1 = 5;
-// let num2 = 8;
-// let sum = num1 + num2;
-// document.getElementById("demo").innerHTML = z;
+    <div class="calculator_box">
+      <div class="edit">
+          <div class="calculator_content_ box"> 
+            <h2> Simple Calculator</h2>
+            <hr>
+            <input type="number" name="num1" id="num1"style="margin: 10px;">
+            <input type="number" name="num2" id="num2"><br><br>
+            <div class="button list">
+                <button class="op button" onclick="additionfun()">+</button>
+                <button class="op button" onclick="subtractfun()">-</button>
+                <button class="op button" onclick="multiplyfun()">*</button>
+                <button class="op button" onclick="dividefun()">/</button>
+                <button class="op button" onclick="modulusfun()">%</button>
+            </div><br>
+            <p class="center">
+                <h2><span class="resulttext">Result</span><br><br></h2>
+                <span id="result"></span>
+            </p>
+            <!-- // if (num >= 1000 && num < 10000) call = 1;
+  // if (num >= 10000 && num < 100000) call = 2;
+  // if (num >= 10000 && num < 1000000) call = 3;
+  // if (num >= 100000 && num < 1000000) call = 4;
+  // if (num >= 1000000 && num < 10000000) call = 5;
+  // if (num >= 10000000 && num < 100000000) call = 6;
+  // if (num >= 100000000 && num < 1000000000) call = 7;
+  // if (num >= 1000000000 && num < 10000000000) call = 8;
+  // if (num >= 10000000000 && num < 100000000000) call = 9;
+  // if (num >= 100000000000 && num < 1000000000000) call = 10; -->
+  
 
-// let i = 10;
-// let j = 20;
-// let k = i - j;
-// console.log(k);
-
-let x = 10;
-let y = 20;
-let a = x + y;
-let b = x-y;
-let c = x*y;
-let d = x/y;
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-
-let postInc = 1;
-// let preInc = 1;
-let postIncFinalValue = postInc--;
-
-console.log('postIncFinalValue', postIncFinalValue--);
-console.log('preInc', --postIncFinalValue);
-
-// for (let t=1; t <=10; t++){
-//     let result = 2 * t;
-//     console.log("2*(i){result }");
-// }
-const tableElement = document.getElementById('table');
-    for (let i = 10; i >= 1; i--) {
-      const li = document.createElement('li');
-      li.textContent = `2 x ${i} = ${2 * i}`;
-      tableElement.appendChild(li);
-    }
-  //  
-
-// let fruits = ["Apple", "Banana", "Mango"];
-//   fruits.push("Orange"); 
-//   console.log(fruits);
-//   // document.write("push(): " + fruits);
-
-
-</script>
-    <!-- <script src="script.js"></script> -->
+        </div>
+      </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
