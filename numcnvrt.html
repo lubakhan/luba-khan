@@ -48,7 +48,8 @@
     }
 }
 
-///////////////////100-1000///////////////// 
+
+///////////////////100-1000///////////////// hundred-thousand//////////////////
 
 if (num < 1000){
   let call1 = 0;
@@ -65,7 +66,7 @@ if (num < 1000){
   }
 }
 
-///////////////////////////1000-1000000/////////////////
+///////////////////////////1000-1000000///////////////thousand-million////////////////////////
 
 if (num < 1000000){
   let call2 = 1;
@@ -83,9 +84,9 @@ if (num < 1000000){
 }
 
 
-///////////////////////1000000-1000000000////////////////////////////////////
+///////////////////////1000000-1000000000////////////////////////////million- billion///////////////////////////
 
-if (1000000 < 1000000000){
+if (num < 1000000000){
   let call3 = 2;
    if (num >= 1000000 && num < 1000000000) call3 = 2;
    
@@ -95,28 +96,31 @@ if (1000000 < 1000000000){
     return milliondigit[call3];
    }
    else{
-    return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call3]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[1] + " " + ones[String(num)[6]] + " " + hundreds[0]  +" " +  tens[String(num)[7]-2] + " "+  ones[String(num)[8]];
+    return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call3]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[0] + " " + ones[String(num)[6]] + " " + hundreds[3]  +" " +  tens[String(num)[5]] + " "+  ones[String(num)[2]];
    }
 }
-//////////////////////////////1000000000-1000000000000//////////////////////////
 
-// if (1000000000 < 1000000000000){
-//   let call4 = 3;
-//   if (num >= 1000000000 && num < 1000000000000) call4 = 3;
-//   let billiondigit = num;
-//   billiondigit = num % 1000000000;
-//   if (billiondigit === 0){
-//     return billiondigit[call4];
-//   }
-//   else{
-//     return ones[String(num)[0]] + " " + hundreds[String(num)[5]]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call4]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[1] + " " + ones[String(num)[6]] + " " + hundreds[0]  +" " +  tens[String(num)[7]-2] + " "+  ones[String(num)[8]] + " " +  hundreds[1] + " " + ones[String(num)[8]] + " " + hundreds[0] + " " +  tens[String(num)[7]-2] + " " + ones[String(num)[8]] ;
-//   }
+//////////////////////////////1000000000-1000000000000//////////////////////////billion-trillion////////////////////////
 
-// }
+if (num < 1000000000000){
+  let call4 = 3;
+  if (num >=  1000000000 && num < 1000000000000) call4 = 3;
+  let billiondigit = num;
+  billiondigit = num %  1000000000;
+  if (billiondigit === 0){
+    return billiondigit[call4];
+  }
+  else{
+    return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call4]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[2] + " " + ones[String(num)[6]] + " " + hundreds[0]  +" " +  tens[String(num)[7]-2] + " "+  ones[String(num)[2]] + " " + hundreds[1] + " " + ones[String(num)[3]] + " " + hundreds[0] + " "  +  tens[String(num)[10]-2] + " " + ones[String(num)[11]] ; 
+  }
+
+}
+if (num = 1000000000000){
+return hundreds[4];
+}
+// one hundred twenty-five billion nine hundred fifty-six million two hundred ninety-five thousand nine hundred forty-nine
  }
-console.log(numtowords(685743321));
-
-
+console.log(numtowords(125956295955));
     
 
 
