@@ -14,7 +14,7 @@
 
     // let words = "";
  function numtowords(num) {
-  let ones= ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+  let ones= ["","one","two","three","four","five","six","seven","eight","nine","ten","eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
   let tens=["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
   let hundreds=["hundred","thousand","million","billion","trillion"];
   let lakh =["lac"];
@@ -82,6 +82,9 @@ if (num < 1000000){
     return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call2]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]];
   }
 }
+if (num >= 1000000 && num < 1000000000){
+return    tens[String(num)[0]-2] +   " "  +  ones[String(num)[1]] +  " " + hundreds[2];
+}
 
 
 ///////////////////////1000000-1000000000////////////////////////////million- billion///////////////////////////
@@ -99,6 +102,9 @@ if (num < 1000000000){
     return ones[String(num)[0]] + " " + hundreds[0]  +" " +  tens[String(num)[1]-2] + " "+  ones[String(num)[2]] +" " +   hundreds[call3]+ " "+  ones[String(num)[3]] + " " + hundreds[0]+ " " +  tens[String(num)[4] - 2] + " " +  ones[String(num)[5]] + " " + hundreds[0] + " " + ones[String(num)[6]] + " " + hundreds[3]  +" " +  tens[String(num)[5]] + " "+  ones[String(num)[2]];
    }
 }
+if (num >=1000000000 && num <1000000000000){
+return  tens[String(num)[0]-2] +   " "  +  ones[String(num)[1]] +  " " + hundreds[3];
+}
 
 //////////////////////////////1000000000-1000000000000//////////////////////////billion-trillion////////////////////////
 
@@ -115,12 +121,12 @@ if (num < 1000000000000){
   }
 
 }
-if (num = 1000000000000){
-return hundreds[4];
+if (num >= 1000000000000 && num < 1000000000000000){
+return tens[String(num)[0]-2] +   " "  +  ones[String(num)[1]] +  " " + hundreds[4];
 }
 // one hundred twenty-five billion nine hundred fifty-six million two hundred ninety-five thousand nine hundred forty-nine
  }
-console.log(numtowords(125956295955));
+console.log(numtowords(8000000000000));
     
 
 
